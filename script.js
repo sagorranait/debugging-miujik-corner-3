@@ -1,5 +1,5 @@
 const elementById = (id) => {
-  document.getElementById(id);
+  return document.getElementById(id);
 };
 
 const handleSearch = () => {
@@ -12,6 +12,7 @@ const handleSearch = () => {
 
 const showArtists = (data) => {
   const artistContainer = elementById("artist");
+  console.log(artistContainer);
   data?.artists?.forEach((artist) => {
     const div = document.createElement("div");
     div.classList.add("artist-card");
