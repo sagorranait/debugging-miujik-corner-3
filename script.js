@@ -12,8 +12,8 @@ const handleSearch = () => {
 
 const showArtists = (data) => {
   const artistContainer = elementById("artists");
+  artistContainer.innerHTML = '';
   data?.artists?.forEach((artist) => {
-    console.log(artist);
     const div = document.createElement("div");
     div.classList.add("artist-card");
     div.innerHTML = `<div class="image-container">
@@ -38,9 +38,9 @@ const showArtists = (data) => {
 };
 
 const fetchAlbums = (id) => {
-  const url = `theaudiodb.com/api/v1/json/2/album.php?i=${id}`;
+  const url = `https://theaudiodb.com/api/v1/json/2/album.php?i=${id}`;
   fetch(url)
-    .then((res) => res.JSON())
+    .then((res) => res.json())
     .then((data) => showAlbum(data));
   const artistContainer = elementById("artists");
   artistContainer.innerHTML = "";
