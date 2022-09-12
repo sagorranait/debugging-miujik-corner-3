@@ -55,12 +55,12 @@ const showAlbum = (data) => {
     div.innerHTML = `
         <div class="album-image-container">
           <img
-            src="${item.strAlbumThumb}"
+            src="${item.strAlbumThumb ? item.strAlbumThumb : './images/image-not-found.jpg'}"
             alt=""
           />
         </div>
         <div class="album-name">
-          <h3>${item.strAlbum}</h3>
+          <h3>${item.strAlbum ? item.strAlbum : 'Data not Found !!!'}</h3>
         </div>
       `;
 
