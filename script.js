@@ -13,6 +13,7 @@ const handleSearch = () => {
 const showArtists = (data) => {
   const artistContainer = elementById("artists");
   data?.artists?.forEach((artist) => {
+    console.log(artist);
     const div = document.createElement("div");
     div.classList.add("artist-card");
     div.innerHTML = `<div class="image-container">
@@ -25,8 +26,8 @@ const showArtists = (data) => {
   </div>
   <div class="info-container">
     <h1>${artist.strArtist}</h1>
-    <p>Country: ${artist.strCountry}</p>
-    <p>Style: ${artist.strGenre}</p>
+    <p>Country: ${artist.strCountry ? artist.strCountry : 'Data not Found !!!'}</p>
+    <p>Style: ${artist.strGenre ? artist.strGenre : 'Data not Found !!!'}</p>
   </div>
   <button class="album-button">
     <i class="fa-solid fa-compact-disc"></i>
