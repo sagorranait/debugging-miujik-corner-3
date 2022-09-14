@@ -7,6 +7,6 @@ const myName = { fistName: "Mir", LastName: "Hussain" };
 
 console.log(typeof myName);
 
-// const myName = ["Mir", "Hussain"];
+const myname = ["Mir", "Hussain"];
 
-// myName.forEach((element) => console.log(element));
+myname.forEach((element) => console.log(element));
